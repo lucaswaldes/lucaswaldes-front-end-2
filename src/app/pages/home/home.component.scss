@@ -1,0 +1,181 @@
+.home {
+
+    header {
+        width: 100%;
+        height: 50px;
+        background-color: rgb(36, 36, 36);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        span {
+            font-size: 18px;
+            font-weight: 700;
+            cursor: default;
+            color: aqua;
+            text-transform: uppercase;
+        }
+    }
+
+    .container {
+        width: 80vw;
+        margin: 0 auto;
+    }
+
+    .first-section {
+        height: 60vh; 
+ 
+        background-color: rgb(12, 12, 12);
+
+        .container {
+            display: flex; 
+            justify-content: space-between; 
+            align-items: center;
+            height: 100%;
+            gap: 20px; 
+            .left {
+                max-width: 70%;
+                h1 {
+                    font-size: 42px;
+                }
+                h2 {
+                    font-size: 32px; color: aqua;
+                    font-family: 'Courier New', Courier, monospace;
+                    font-size: 2rem;
+                    white-space: nowrap;
+                    overflow: hidden;
+                    border-right: 3px solid aqua; /* Efeito de cursor */
+                    display: inline-block;
+                    animation: blink 0.7s step-end infinite; /* Efeito de piscar */
+                }
+                  @keyframes blink {
+                    50% {
+                      border-color: transparent; /* Torna o cursor invisível na metade da animação */
+                    }
+                  }
+                p {
+                    color: rgb(194, 194, 194); 
+                    font-size: 22px; 
+                    margin-top: 20px;
+                    font-weight: 500;
+
+                }
+
+                .wrapper-buttons {
+                    margin-top: 25px;
+                    button {
+                        background-color: aqua; font-size: 20px; width: 200px; height: 48px; border-radius: 15px;  border: none; cursor: pointer;
+                        font-weight: 600;
+                        transition: 0.2s all ease-in-out;
+    
+                        &:hover {
+                            background-color: white;
+                        }
+                    }
+                }
+            }
+    
+            .right {
+                width: 30%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                figure {
+                    img {
+                        border-radius: 50%; width: 300px; border: 5px solid aqua;
+                    }
+                }
+            }
+        }
+    }
+
+    .second-section {
+        display: flex; 
+        flex-direction: column; 
+        align-items: center; 
+        justify-content: center; 
+        padding-top: 20px;
+        padding-bottom: 20px;
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            h3 {
+                font-size: 32px;
+            }
+    
+            .card-container {
+                display: flex; 
+                gap: 20px;
+                padding-top: 30px;
+                width: 100%;
+                justify-content: space-between;
+                flex-wrap: wrap; /* Para garantir que os cards não saiam da tela e que quebrem para a linha seguinte, se necessário */
+            }
+            
+            .card {
+                flex: 1 1 300px; /* flex-grow, flex-shrink, flex-basis */
+                background-color: rgba(255,255,255, 0.1); 
+                padding: 10px; 
+                border-radius: 15px; 
+                cursor: pointer !important;
+                min-width: 250px; /* Tamanho mínimo */
+                max-width: 500px; /* Tamanho máximo */
+                box-sizing: border-box; /* Para garantir que o padding não altere o tamanho do card */
+            
+                a {
+                    text-decoration: none;
+            
+                    h4 {
+                        padding-top: 10px;
+                        font-size: 22px !important;
+                        cursor: pointer;
+                        color: aqua; 
+                        font-size: 18px;
+                    }
+            
+                    p {
+                        padding-top: 20px;
+                        padding-bottom: 10px;
+                        cursor: pointer;
+                        font-size: 18px;
+                        color: rgb(194, 194, 194); 
+
+                        font-weight: 500;
+
+                    }
+                }
+            
+                transition: 0.2s all ease-in-out;
+            
+                &:hover {
+                    transform: scale(1.02);
+                    background-color: rgba(255,255,255, .2);
+
+                    a {
+                        p {
+                            color: #ffffff;
+                        }
+                    }
+                }
+            }
+            
+        }
+    }
+
+    footer {
+        width: 100%;
+        height: 40px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: rgb(36, 36, 36);
+        position: absolute;
+        bottom: 0;
+        span {
+            color: #b6b6b6 !important;
+            font-size: 18px;
+            font-weight: 600;
+        }
+    }
+}
